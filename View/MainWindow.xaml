@@ -1,0 +1,63 @@
+﻿<Window
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calendar_Interface_"
+        xmlns:View="clr-namespace:Calendar_Interface_.View" x:Class="Calendar_Interface_.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="180*"/>
+            <ColumnDefinition Width="439*"/>
+            <ColumnDefinition Width="181*"/>
+
+
+
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="52*"/>
+            <RowDefinition Height="165*"/>
+
+
+        </Grid.RowDefinitions>
+
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding Datashow, Mode=TwoWay}" VerticalAlignment="Top" Height="46" Width="419" Grid.Column="1" Margin="0,42,0,0"   x:Name="Datashow"/>
+        <Button Content="&lt;" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding ButtonBackClick}" x:Name="ButtonBack" Height="32" Width="42">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="ButtonBase.Click">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Height"
+                         From="30" To="50" AutoReverse="True" Duration="0:0:0.2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+
+
+            </Button.Triggers>
+        </Button>
+        <Button Content="&gt;" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Command="{Binding ButtonForwardClick}" x:Name="ButtonForward" Height="32" Width="40" >
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="ButtonBase.Click">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Height"
+                         From="30" To="50" AutoReverse="True" Duration="0:0:0.2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+
+
+            </Button.Triggers>
+
+        </Button>
+        <Frame Content="{Binding Pageshowing}" Grid.ColumnSpan="3" Margin="10,104,10,0" Grid.RowSpan="2" IsEnabled="False" NavigationUIVisibility="Hidden"/>
+
+    </Grid>
+</Window>

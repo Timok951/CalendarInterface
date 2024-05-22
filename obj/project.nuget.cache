@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "lPQJOobXM20xfGu1l/OGlm7QvAHXfWCVL9X4utAZPTQSjQGbdtUQlrzZ8WM+h+rN/rA/J96+2ta2hONGaPP66A==",
+  "success": true,
+  "projectFilePath": "H:\\П50-4-22\\Программирование\\C#\\01.05.2024\\Calendar(Interface)\\Calendar(Interface)\\Calendar(Interface).csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\timof\\.nuget\\packages\\materialdesigncolors\\3.0.0\\materialdesigncolors.3.0.0.nupkg.sha512",
+    "C:\\Users\\timof\\.nuget\\packages\\materialdesignthemes\\5.0.0\\materialdesignthemes.5.0.0.nupkg.sha512",
+    "C:\\Users\\timof\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
+  ],
+  "logs": []
+}
